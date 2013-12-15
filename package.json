@@ -1,20 +1,20 @@
 {
-  "name": "remwork",
+  "name": "pixrem",
   "description": "Generate stylesheets with pixel fallbacks for rem units",
   "version": "0.1.0",
-  "homepage": "https://github.com/robwierzbowski/remwork",
+  "homepage": "https://github.com/robwierzbowski/pixrem",
   "author": "Rob Wierzbowski <hello@robwierzbowski.com> (http://robwierzbowski.com)",
   "repository": {
     "type": "git",
-    "url": "git://github.com/robwierzbowski/remwork.git"
+    "url": "git://github.com/robwierzbowski/pixrem.git"
   },
-  "bugs": "https://github.com/robwierzbowski/remwork/issues",
+  "bugs": "https://github.com/robwierzbowski/pixrem/issues",
   "licenses": [
     {
       "type": "BSD-new"
     }
   ],
-  "main": "lib/remwork.js",
+  "main": "lib/pixrem.js",
   "engines": {
     "node": ">=0.10.0",
     "npm": ">=1.2.10"

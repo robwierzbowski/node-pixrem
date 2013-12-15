@@ -1,4 +1,4 @@
-# Remwork
+# Pixrem
 
 ## Installation
 

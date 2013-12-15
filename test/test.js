@@ -1,8 +1,8 @@
 'use strict';
 var fs = require('fs');
-var remwork = require('../lib/remwork');
+var pixrem = require('../lib/pixrem');
 var css = fs.readFileSync('./test/app/test.css', 'utf8');
 
-console.log(remwork(css));
-console.log(remwork(css, '200%'));
-console.log(remwork(css, '200%', { replace: true }));
+console.log(pixrem(css));
+console.log(pixrem(css, '200%'));
+console.log(pixrem(css, '200%', { replace: true }));
