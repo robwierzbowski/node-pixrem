@@ -25,7 +25,9 @@
   "dependencies": {
     "postcss": "~0.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jasmine-node": "~1.11.0"
+  },
   "keywords": [
     "css",
     "parser",
