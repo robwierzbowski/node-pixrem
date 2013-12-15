@@ -54,7 +54,7 @@ Default: `{ replace: false }`
 
 ## Contribute
 
-Report bugs and feature proposals in the [Github issue tracker](https://github.com/robwierzbowski/XXX/issues). In lieu of a formal styleguide, take care to maintain the existing coding style. 
+Report bugs and feature proposals in the [Github issue tracker](https://github.com/robwierzbowski/node-pixrem/issues). Run tests with jasmine-node. In lieu of a formal styleguide, take care to maintain the existing coding style. 
 
 ## Release History
 
