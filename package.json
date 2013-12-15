@@ -1,6 +1,6 @@
 {
   "name": "pixrem",
-  "description": "A CSS post-processor that adds pixel fallbacks for rems.",
+  "description": "A CSS post-processor that generates pixel fallbacks for rem units.",
   "version": "0.1.1",
   "homepage": "https://github.com/robwierzbowski/pixrem",
   "author": "Rob Wierzbowski <hello@robwierzbowski.com> (http://robwierzbowski.com)",
