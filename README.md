@@ -23,7 +23,9 @@ var css = fs.readFileSync('main.css', 'utf8');
 var processedCss = pixrem(css, '200%');
 
 fs.writeFile('main.with-fallbacks.css', processedCss, function (err) {
-  if (err) throw err;
+  if (err) {
+    throw err;
+  }
   console.log('IE8, you\'re welcome.');
 });
 ```
