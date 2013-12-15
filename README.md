@@ -29,6 +29,41 @@ fs.writeFile('main.with-fallbacks.css', processedCss, function (err) {
 });
 ```
 
+Pixrem takes this:
+
+```css
+.sky {
+  margin: 2.5rem 2px 3em 100%;
+  color: blue;
+}
+
+@media screen and (min-width: 20rem) {
+  .leaf {
+    margin-bottom: 1.333rem;
+    font-size: 1.5rem;
+  }
+}
+```
+
+And returns this:
+
+```css
+.sky {
+  margin: 80px 2px 3em 100%;
+  margin: 2.5rem 2px 3em 100%;
+  color: blue;
+}
+
+@media screen and (min-width: 20rem) {
+  .leaf {
+    margin-bottom: 42px;
+    margin-bottom: 1.333rem;
+    font-size: 48px;
+    font-size: 1.5rem;
+  }
+}
+```
+
 ### Parameters
 
 #### css
