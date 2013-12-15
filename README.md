@@ -97,7 +97,7 @@ Report bugs and feature proposals in the [Github issue tracker](https://github.c
 
 ## License
 
-[BSD-NEW](http://en.wikipedia.org/wiki/BSD_License)
+[MIT](http://en.wikipedia.org/wiki/MIT_License)
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/robwierzbowski/node-pixrem/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
