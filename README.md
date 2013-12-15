@@ -1,7 +1,8 @@
 # Pixrem
 
-Add pixel fallbacks for rems.  
-A CSS post-processor written with [PostCSS](https://github.com/ai/postcss). 
+A CSS post-processor that generates pixel fallbacks for rem units.  
+Written with [PostCSS](https://github.com/ai/postcss).  
+Add it to your build process with [grunt-pixrem](https://github.com/robwierzbowski/grunt-pixrem).  
 
 ## Installation
 
@@ -9,11 +10,9 @@ A CSS post-processor written with [PostCSS](https://github.com/ai/postcss).
 
 ## Usage
 
-Pixrem is a CSS post-processor that adds pixel fallbacks or replacements to your CSS. You can use it as a node package or add it to your Grunt build process with [grunt-pixrem](https://github.com/robwierzbowski/grunt-pixrem).
+Pixrem is a CSS post-processor that, given CSS and a root em value, returns CSS with pixel unit fallbacks or replacements.
 
 ### Example
-
-<!-- TODO: make sure this works -->
 
 ```js
 'use strict';
