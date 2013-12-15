@@ -57,6 +57,7 @@ Report bugs and feature proposals in the [Github issue tracker](https://github.c
 
 ## Release History
 
+0.1.1, Dec 14, 2013: Improve README copy.
 0.1.0, Dec 14, 2013: Initial release.
 
 ## License
