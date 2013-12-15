@@ -10,7 +10,7 @@ Add it to your build process with [grunt-pixrem](https://github.com/robwierzbows
 
 ## Usage
 
-Pixrem is a CSS post-processor that, given CSS and a root em value, returns CSS with pixel unit fallbacks or replacements.
+Pixrem is a CSS post-processor that, given CSS and a root em value, returns CSS with pixel unit fallbacks or replacements. Check the [browser support data](http://caniuse.com/rem): if you want to support < IE9, Opera Mini, or older Opera Mobile, this post-processor is for you.
 
 ### Example
 
