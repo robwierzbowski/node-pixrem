@@ -3,4 +3,6 @@ var fs = require('fs');
 var remwork = require('../lib/remwork');
 var css = fs.readFileSync('./test/app/test.css', 'utf8');
 
-console.log(remwork(css, '150%'));
+console.log(remwork(css));
+console.log(remwork(css, '200%'));
+console.log(remwork(css, '200%', { replace: true }));
