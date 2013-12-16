@@ -6,7 +6,7 @@ Add it to your build process with [grunt-pixrem](https://github.com/robwierzbows
 
 ## Installation
 
-`npm install --save node-pixrem`
+`npm install --save pixrem`
 
 ## Usage
 
