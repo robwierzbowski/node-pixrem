@@ -92,6 +92,7 @@ Report bugs and feature proposals in the [Github issue tracker](https://github.c
 
 ## Release History
 
+0.1.3, Dec 14, 2013: Fix regex for < 0 values.  
 0.1.1, 0.1.2, Dec 14, 2013: Documentation improvements.  
 0.1.0, Dec 14, 2013: Initial release.  
 
