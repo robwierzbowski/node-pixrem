@@ -65,4 +65,12 @@ describe('pixrem', function () {
 
     expect(processed).toBe(expected);
   });
+
+  it('should handle < 1 values and values without a leading 0', function () {
+    var css = '.rule { margin: 0.5rem .5rem 0rem -2rem }';
+    var expected = '.rule { margin: 8px 8px 0px -32px; margin: 0.5rem .5rem 0rem -2rem }';
+    var processed = pixrem(css);
+
+    expect(processed).toBe(expected);
+  });
 });
