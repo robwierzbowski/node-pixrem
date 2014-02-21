@@ -20,7 +20,7 @@
     "npm": ">=1.2.10"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "jasmine-node spec"
   },
   "dependencies": {
     "postcss": "~0.1.0"
