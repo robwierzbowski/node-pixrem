@@ -1,5 +1,7 @@
 # Pixrem
 
+[![Build Status](https://travis-ci.org/robwierzbowski/node-pixrem.png?branch=master)](https://travis-ci.org/robwierzbowski/node-pixrem)
+
 A CSS post-processor that generates pixel fallbacks for rem units.  
 Written with [PostCSS](https://github.com/ai/postcss).  
 Add it to your build process with [grunt-pixrem](https://github.com/robwierzbowski/grunt-pixrem).  
