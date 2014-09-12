@@ -75,4 +75,13 @@ describe('pixrem', function () {
 
     expect(processed).toBe(expected);
   });
+
+  it('should generate default fallback with an inline sourcemap', function () {
+    var expected = '.rule { font-size: 32px; font-size: 2rem }\n/*# sourceMappingURL=whatever.css.map */';
+    var processed = pixrem.process(css, undefined, {}, {
+      map: true,
+      to: 'whatever.css'
+    });
+    expect(processed).toBe(expected);
+  });
 });
