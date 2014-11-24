@@ -6,10 +6,6 @@ A CSS post-processor that generates pixel fallbacks for rem units.
 Written with [PostCSS](https://github.com/ai/postcss).  
 Add it to your build process with [grunt-pixrem](https://github.com/robwierzbowski/grunt-pixrem).  
 
-## Semi-deprecated
-
-I'm not working on any ie8 projects anymore, so have no reason to use this code.If you find this code useful feel free to ping me and I'll hand the repo over to you.
-
 ## Installation
 
 `npm install --save pixrem`
