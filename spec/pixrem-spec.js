@@ -8,8 +8,6 @@ var fs = require('fs');
 var pixrem = require('../lib/pixrem');
 var css = '.rule { font-size: 2rem }';
 
-console.log(pixrem);
-
 describe('pixrem', function () {
 
   it('should generate fallbacks using default settings', function () {
@@ -84,4 +82,36 @@ describe('pixrem', function () {
     });
     expect(processed).toBe(expected);
   });
+
+  it('should not convert rem in at-rules', function () {
+    var css = '@media screen { .rule { font-size: 2rem } } @keyframes name { from { font-size: 2rem } }';
+    var processed = pixrem.process(css);
+    expect(processed).toBe(css);
+  });
+
+  it('should convert rem in at-rules if options is false', function () {
+    var css = '@media screen { .rule { font-size: 2rem } }';
+    var expected = '@media screen { .rule { font-size: 32px; font-size: 2rem } }';
+    var processed = pixrem.process(css, undefined, { atrules: true });
+    expect(processed).toBe(expected);
+  });
+
+  it('should not convert rem in nested at-rules', function () {
+    var css = '@media screen { .rule { font-size: 2rem } @media screen { .rule { font-size: 2rem } @media screen { .rule { font-size: 2rem } } } }';
+    var processed = pixrem.process(css);
+    expect(processed).toBe(css);
+  });
+
+  it('should not convert rem in unsupported feature (value)', function () {
+    var css = '.rule { width: calc(100% - 2rem); background: linear-gradient(red 2rem, blue) }';
+    var processed = pixrem.process(css);
+    expect(processed).toBe(css);
+  });
+
+  it('should not convert rem in unsupported feature (property)', function () {
+    var css = '.rule { transform: translate(2rem) }';
+    var processed = pixrem.process(css);
+    expect(processed).toBe(css);
+  });
+
 });

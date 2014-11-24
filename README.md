@@ -62,9 +62,7 @@ And returns this:
 
 @media screen and (min-width: 20rem) {
   .leaf {
-    margin-bottom: 42px;
     margin-bottom: 1.333rem;
-    font-size: 48px;
     font-size: 1.5rem;
   }
 }
@@ -88,9 +86,10 @@ The root element font size. Can be px, rem, em, percent, or unitless pixel value
 #### options
 
 Type: `Object | Null`  
-Default: `{ replace: false }`  
+Default: `{ replace: false, atrules: false }`  
 
 - `replace` replaces rules containing rems instead of adding fallbacks.
+- `atrules` generates fallback in at-rules too (media-queries)
 
 ## Contribute
 
