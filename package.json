@@ -23,7 +23,7 @@
     "test": "jasmine-node spec"
   },
   "dependencies": {
-    "postcss": "~2.2.0"
+    "postcss": "^3.0.0"
   },
   "devDependencies": {
     "jasmine-node": "~1.11.0"

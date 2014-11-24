@@ -77,7 +77,7 @@ describe('pixrem', function () {
   it('should generate default fallback with an inline sourcemap', function () {
     var expected = '.rule { font-size: 32px; font-size: 2rem }\n/*# sourceMappingURL=whatever.css.map */';
     var processed = pixrem.process(css, undefined, {}, {
-      map: true,
+      map: { 'inline': false },
       to: 'whatever.css'
     });
     expect(processed).toBe(expected);
@@ -89,7 +89,7 @@ describe('pixrem', function () {
     expect(processed).toBe(css);
   });
 
-  it('should convert rem in at-rules if options is false', function () {
+  it('should convert rem in at-rules if options is true', function () {
     var css = '@media screen { .rule { font-size: 2rem } }';
     var expected = '@media screen { .rule { font-size: 32px; font-size: 2rem } }';
     var processed = pixrem.process(css, undefined, { atrules: true });
