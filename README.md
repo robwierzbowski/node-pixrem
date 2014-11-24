@@ -81,7 +81,7 @@ Some CSS to process.
 Type: `String | Null`  
 Default: `16px`  
 
-The root element font size. Can be px, rem, em, percent, or unitless pixel value.
+The root element font size. Can be px, rem, em, percent, or unitless pixel value. Pixrem also tries to get the root font-size from CSS (`html` or `:root`) and overrides this option.
 
 #### options
 
