@@ -93,6 +93,12 @@ Report bugs and feature proposals in the [Github issue tracker](https://github.c
 
 ## Release History
 
+1.0.0, Nov 26, 2014: 
+
+* Generate rem fallbacks only when needed
+* Updated to PostCSS v3.0
+* Get root font-size from CSS
+
 0.1.4, March 6, 2014: Code optimization from AI.  
 0.1.3, Dec 14, 2013: Fix regex for < 0 values.  
 0.1.1, 0.1.2, Dec 14, 2013: Documentation improvements.  
