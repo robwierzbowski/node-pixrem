@@ -133,4 +133,12 @@ describe('pixrem', function () {
 
   });
 
+  it('should run through font shorthand without root size', function () {
+    var css = 'html { font: inherit } .rule { font-size: 2rem; }';
+    var expected = 'html { font: inherit } .rule { font-size: 32px; font-size: 2rem; }';
+    var processed = pixrem.process(css);
+
+    expect(processed).toBe(expected);
+  });
+
 });
