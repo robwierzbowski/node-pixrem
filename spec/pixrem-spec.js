@@ -4,8 +4,10 @@
 // 2. `jasmine-node spec`
 
 'use strict';
-var fs = require('fs');
-var pixrem = require('../lib/pixrem');
+var fs      = require('fs');
+var pixrem  = require('../lib/pixrem');
+var postcss = require('postcss');
+
 var css = '.rule { font-size: 2rem }';
 
 describe('pixrem', function () {
@@ -140,5 +142,10 @@ describe('pixrem', function () {
 
     expect(processed).toBe(expected);
   });
+
+  it('should expose postcss processor', function () {
+    var expected = postcss().use(pixrem).process('a { width: 2rem }').css;
+    expect('a { width: 32px; width: 2rem }').toBe(expected);
+  })
 
 });
