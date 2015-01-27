@@ -132,7 +132,6 @@ describe('pixrem', function () {
     expected = '.rule { font-size: 40px; font-size: 2rem; } :root { font: italic 100 20px/24px sans-serif }';
     processed = pixrem.process(css);
     expect(processed).toBe(expected);
-
   });
 
   it('should run through font shorthand without root size', function () {
@@ -145,7 +144,12 @@ describe('pixrem', function () {
 
   it('should expose postcss processor', function () {
     var expected = postcss().use(pixrem).process('a { width: 2rem }').css;
-    expect('a { width: 32px; width: 2rem }').toBe(expected);
-  })
+    expect(expected).toBe('a { width: 32px; width: 2rem }');
+  });
+
+  it('should expose processor and allow options', function () {
+    var expected = postcss().use(pixrem('10px', {replace: true})).process('a { width: 2rem }').css;
+    expect(expected).toBe('a { width: 20px }');
+  });
 
 });
