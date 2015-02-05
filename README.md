@@ -92,6 +92,10 @@ Default: `{ replace: false, atrules: false }`
 Report bugs and feature proposals in the [Github issue tracker](https://github.com/robwierzbowski/node-pixrem/issues). Run tests with jasmine-node. In lieu of a formal styleguide, take care to maintain the existing coding style. 
 
 ## Release History
+1.1.1, Feb 5, 2015:
+
+* Fix root font-size detection
+
 1.1.0, Jan 25, 2015:
 
 * PostCSS 4
