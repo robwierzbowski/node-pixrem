@@ -134,6 +134,14 @@ describe('pixrem', function () {
     expect(processed).toBe(expected);
   });
 
+  it('should not use root font-size in MQ', function () {
+    var css = 'html { font-size: 10px } @media screen { html { font-size: 20px } } .rule { font-size: 2rem; }';
+    var expected = 'html { font-size: 10px } @media screen { html { font-size: 20px } } .rule { font-size: 20px; font-size: 2rem; }';
+    var processed = pixrem.process(css);
+    expect(processed).toBe(expected);
+
+  });
+
   it('should run through font shorthand without root size', function () {
     var css = 'html { font: inherit } .rule { font-size: 2rem; }';
     var expected = 'html { font: inherit } .rule { font-size: 32px; font-size: 2rem; }';
