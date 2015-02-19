@@ -134,20 +134,33 @@ describe('pixrem', function () {
     expect(processed).toBe(expected);
   });
 
+  it('should use root font-size defined with calc', function () {
+    var css = 'html { font-size: calc(.625em * 1) } .rule { font-size: 2rem; }';
+    var expected = 'html { font-size: calc(.625em * 1) } .rule { font-size: 20px; font-size: 2rem; }';
+    var processed = pixrem.process(css);
+    expect(processed).toBe(expected);
+  });
+
   it('should not use root font-size in MQ', function () {
     var css = 'html { font-size: 10px } @media screen { html { font-size: 20px } } .rule { font-size: 2rem; }';
     var expected = 'html { font-size: 10px } @media screen { html { font-size: 20px } } .rule { font-size: 20px; font-size: 2rem; }';
     var processed = pixrem.process(css);
     expect(processed).toBe(expected);
-
   });
 
   it('should run through font shorthand without root size', function () {
     var css = 'html { font: inherit } .rule { font-size: 2rem; }';
     var expected = 'html { font: inherit } .rule { font-size: 32px; font-size: 2rem; }';
     var processed = pixrem.process(css);
-
     expect(processed).toBe(expected);
+  });
+
+  it('should throw error when root font-size is invalid', function () {
+    var css = 'html { font-size: calc(1em + 2px) } .rule { font-size: 2rem; }';
+    var processed = function () {
+      return pixrem.process(css);
+    };
+    expect(processed).toThrow('Root font-size is invalid');
   });
 
   it('should expose postcss processor', function () {
