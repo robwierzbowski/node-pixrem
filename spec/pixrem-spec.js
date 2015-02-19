@@ -155,6 +155,13 @@ describe('pixrem', function () {
     expect(processed).toBe(expected);
   });
 
+  it('should not use root font-size when option is set', function () {
+    var css = 'html { font-size: 10px } .rule { font-size: 2rem; }';
+    var expected = 'html { font-size: 10px } .rule { font-size: 32px; font-size: 2rem; }';
+    var processed = pixrem.process(css, '16px', {html: false});
+    expect(processed).toBe(expected);
+  });
+
   it('should throw error when root font-size is invalid', function () {
     var css = 'html { font-size: calc(1em + 2px) } .rule { font-size: 2rem; }';
     var processed = function () {
