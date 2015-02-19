@@ -77,21 +77,28 @@ Some CSS to process.
 Type: `String | Null`  
 Default: `16px`  
 
-The root element font size. Can be px, rem, em, percent, or unitless pixel value. Pixrem also tries to get the root font-size from CSS (`html` or `:root`) and overrides this option.
+The root element font size. Can be `px`, `rem`, `em`, `%`, or unitless pixel value. Pixrem also tries to get the root font-size from CSS (`html` or `:root`) and overrides this option. You can use `html` option to disable it in case you need it.
 
 #### options
 
-Type: `Object | Null`  
-Default: `{ replace: false, atrules: false }`  
+Type: `Object | Null`
+Default: `{ replace: false, atrules: false, html: true }`
 
-- `replace` replaces rules containing rems instead of adding fallbacks.
+- `replace` replaces rules containing `rem`s instead of adding fallbacks.
 - `atrules` generates fallback in at-rules too (media-queries)
+- `html`    overrides root font-size from CSS `html {}` or `:root {}`
 
 ## Contribute
 
 Report bugs and feature proposals in the [Github issue tracker](https://github.com/robwierzbowski/node-pixrem/issues). Run tests with jasmine-node. In lieu of a formal styleguide, take care to maintain the existing coding style. 
 
 ## Release History
+1.2.0, Feb 19, 2015
+
+* Add option `html` to disable root font-size detection
+* Fix root-font size defined with `calc`
+* Throw error when root font-size is invalid
+
 1.1.1, Feb 5, 2015:
 
 * Fix root font-size detection
