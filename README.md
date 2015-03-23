@@ -93,6 +93,10 @@ Default: `{ replace: false, atrules: false, html: true }`
 Report bugs and feature proposals in the [Github issue tracker](https://github.com/robwierzbowski/node-pixrem/issues). Run tests with jasmine-node. In lieu of a formal styleguide, take care to maintain the existing coding style. 
 
 ## Release History
+1.2.1, Mar 23, 2015
+
+* Reduce line-breaks when inserting clone node
+
 1.2.0, Feb 19, 2015
 
 * Add option `html` to disable root font-size detection
