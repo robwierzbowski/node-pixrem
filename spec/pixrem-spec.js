@@ -180,4 +180,32 @@ describe('pixrem', function () {
     expect(expected).toBe('a { width: 20px }');
   });
 
+  it('should reduce line-breaks when inserting new node', function () {
+    var css = '.rule{\n\tcolor:red;\n\n\tfont-size:2rem;\n}';
+    var expected = '.rule{\n\tcolor:red;\n\n\tfont-size:32px;\n\tfont-size:2rem;\n}';
+    var processed = pixrem.process(css);
+    expect(processed).toBe(expected);
+  });
+
+  it('should reduce and keep windows line-breaks', function () {
+    var css = '.rule{\r\n\tcolor:red;\r\n\r\n\tfont-size:2rem;\r\n}';
+    var expected = '.rule{\r\n\tcolor:red;\r\n\r\n\tfont-size:32px;\r\n\tfont-size:2rem;\r\n}';
+    var processed = pixrem.process(css);
+    expect(processed).toBe(expected);
+  });
+
+  it('should reduce and keep linux line-breaks', function () {
+    var css = '.rule{\r\tcolor:red;\r\r\tfont-size:2rem;\r}';
+    var expected = '.rule{\r\tcolor:red;\r\r\tfont-size:32px;\r\tfont-size:2rem;\r}';
+    var processed = pixrem.process(css);
+    expect(processed).toBe(expected);
+  });
+
+  it('should not reduce line-breaks when replacing node', function () {
+    var css = '.rule{\n\tcolor:red;\n\n\tfont-size:2rem;\n}';
+    var expected = '.rule{\n\tcolor:red;\n\n\tfont-size:32px;\n}';
+    var processed = pixrem.process(css, undefined, {replace: true});
+    expect(processed).toBe(expected);
+  });
+
 });
