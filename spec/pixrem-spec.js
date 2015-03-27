@@ -134,6 +134,13 @@ describe('pixrem', function () {
     expect(processed).toBe(expected);
   });
 
+  it('should detect root font-size only if targeted', function () {
+    var css = ':root a { font-size: 10px } .rule { font-size: 2rem; }';
+    var expected = ':root a { font-size: 10px } .rule { font-size: 32px; font-size: 2rem; }';
+    var processed = pixrem.process(css);
+    expect(processed).toBe(expected);
+  });
+
   it('should use root font-size defined with calc', function () {
     var css = 'html { font-size: calc(.625em * 1) } .rule { font-size: 2rem; }';
     var expected = 'html { font-size: calc(.625em * 1) } .rule { font-size: 20px; font-size: 2rem; }';
