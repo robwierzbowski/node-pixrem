@@ -93,6 +93,10 @@ Default: `{ replace: false, atrules: false, html: true }`
 Report bugs and feature proposals in the [Github issue tracker](https://github.com/robwierzbowski/node-pixrem/issues). Run tests with jasmine-node. In lieu of a formal styleguide, take care to maintain the existing coding style. 
 
 ## Release History
+1.2.4, Apr 17, 2015
+
+* Fixed: generate fallbacks with a value starting with dot
+
 1.2.3, Mar 27, 2015
 
 * Fix: copy and reduce decl.before, only if defined
