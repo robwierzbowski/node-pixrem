@@ -54,6 +54,13 @@ describe('pixrem', function () {
     expect(processed).toBe(expected);
   });
 
+  it('should generate fallbacks with a value starting with dot', function () {
+    var expected = '.rule { font-size: 16px; font-size: 2rem }';
+    var processed = pixrem.process(css, '.5em');
+
+    expect(processed).toBe(expected);
+  });
+
   it('should replace rules with fallbacks when option.replace is true', function () {
     var expected = '.rule { font-size: 40px }';
     var processed = pixrem.process(css, '20px', { replace: true });
