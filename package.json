@@ -23,6 +23,7 @@
     "test": "jasmine-node spec"
   },
   "dependencies": {
+    "browserslist": "^0.5.0",
     "postcss": "^4.0.0",
     "reduce-css-calc": "^1.2.0"
   },

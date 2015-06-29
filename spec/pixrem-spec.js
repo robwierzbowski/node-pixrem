@@ -222,4 +222,18 @@ describe('pixrem', function () {
     expect(processed).toBe(expected);
   });
 
+  it('should not add fallback when ie 8 is not in scope', function () {
+    var css = '.rule{width: 2rem}';
+    var expected = '.rule{width: 2rem}';
+    var processed = pixrem.process(css, undefined, {browsers: 'last 2 versions'});
+    expect(processed).toBe(expected);
+  });
+
+  it('should add fallback when ie 6 is in scope', function () {
+    var css = '.rule{width: 2rem}';
+    var expected = '.rule{width: 32px;width: 2rem}';
+    var processed = pixrem.process(css, undefined, {browsers: 'ie 6'});
+    expect(processed).toBe(expected);
+  });
+
 });
