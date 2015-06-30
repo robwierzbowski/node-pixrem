@@ -105,6 +105,13 @@ describe('pixrem', function () {
     expect(processed).toBe(expected);
   });
 
+  it('should convert rem in at-rules for IE9 hacks', function () {
+    var css = '@media screen { .rule { font-size: 2rem } .rule::after { font-size: 2rem } }';
+    var expected = '@media screen { .rule { font-size: 2rem } .rule::after { font-size: 32px; font-size: 2rem } }';
+    var processed = pixrem.process(css, undefined, {browsers: 'ie 9'});
+    expect(processed).toBe(expected);
+  });
+
   it('should not convert rem in nested at-rules', function () {
     var css = '@media screen { .rule { font-size: 2rem } @media screen { .rule { font-size: 2rem } @media screen { .rule { font-size: 2rem } } } }';
     var processed = pixrem.process(css);
