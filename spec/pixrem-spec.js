@@ -236,4 +236,11 @@ describe('pixrem', function () {
     expect(processed).toBe(expected);
   });
 
+  it('should add fallback only for font and pseudo-element when IE9 is in scope', function () {
+    var css = '.rule{width: 2rem;font: bold 2rem sans-serif}.rule::after{width: 2rem}';
+    var expected = '.rule{width: 2rem;font: bold 32px sans-serif;font: bold 2rem sans-serif}.rule::after{width: 32px;width: 2rem}';
+    var processed = pixrem.process(css, undefined, {browsers: 'ie 9'});
+    expect(processed).toBe(expected);
+  });
+
 });
