@@ -229,10 +229,10 @@ describe('pixrem', function () {
     expect(processed).toBe(expected);
   });
 
-  it('should not add fallback when IE8 is not in scope', function () {
+  it('should not add fallback when IE8- are not in scope', function () {
     var css = '.rule{width: 2rem}';
     var expected = '.rule{width: 2rem}';
-    var processed = pixrem.process(css, undefined, {browsers: 'last 2 versions'});
+    var processed = pixrem.process(css, undefined, {browsers: 'firefox 28'});
     expect(processed).toBe(expected);
   });
 
