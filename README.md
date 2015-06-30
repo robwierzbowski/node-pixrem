@@ -12,7 +12,7 @@ Add it to your build process with [grunt-pixrem](https://github.com/robwierzbows
 
 ## Usage
 
-Pixrem is a CSS post-processor that, given CSS and a root em value, returns CSS with pixel unit fallbacks or replacements. Check the [browser data](http://caniuse.com/rem): if you want to use rem units and support < IE9, Opera Mini, or older Opera Mobile, this post-processor is for you.
+Pixrem is a CSS post-processor that, given CSS and a root em value, returns CSS with pixel unit fallbacks or replacements. It's based on [browser data](http://caniuse.com/rem) so only needed fallbacks will be added. Basically, it's for IE8 or less, and for IE9 & IE10 in the `font` shorthand property and in pseudo-elements.
 
 ### Example
 
@@ -82,17 +82,23 @@ The root element font size. Can be `px`, `rem`, `em`, `%`, or unitless pixel val
 #### options
 
 Type: `Object | Null`
-Default: `{ replace: false, atrules: false, html: true }`
+Default: `{ replace: false, atrules: false, html: true, browsers: 'ie <= 8' }`
 
-- `replace` replaces rules containing `rem`s instead of adding fallbacks.
-- `atrules` generates fallback in at-rules too (media-queries)
-- `html`    overrides root font-size from CSS `html {}` or `:root {}`
+- `replace`  replaces rules containing `rem`s instead of adding fallbacks.
+- `atrules`  generates fallback in at-rules too (media-queries)
+- `html`     overrides root font-size from CSS `html {}` or `:root {}`
+- `browsers` sets browser's range you want to target, based on [browserslist](https://github.com/ai/browserslist)
 
 ## Contribute
 
 Report bugs and feature proposals in the [Github issue tracker](https://github.com/robwierzbowski/node-pixrem/issues). Run tests with jasmine-node. In lieu of a formal styleguide, take care to maintain the existing coding style. 
 
 ## Release History
+
+HEAD
+
+* Added: Use browserslist to generate rem fallbacks only when needed
+
 1.2.4, Apr 17, 2015
 
 * Fixed: generate fallbacks with a value starting with dot
