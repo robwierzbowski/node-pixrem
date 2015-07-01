@@ -95,7 +95,7 @@ Report bugs and feature proposals in the [Github issue tracker](https://github.c
 
 ## Release History
 
-HEAD
+1.3.0, Jul 1, 2015
 
 * Added: Use browserslist to generate rem fallbacks only when needed
 
