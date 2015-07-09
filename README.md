@@ -95,6 +95,10 @@ Report bugs and feature proposals in the [Github issue tracker](https://github.c
 
 ## Release History
 
+1.3.1, Jul 9, 2015
+
+* Fixed: Replace `eachDecl` with `each` and `decl.type` check in process function
+
 1.3.0, Jul 1, 2015
 
 * Added: Use browserslist to generate rem fallbacks only when needed
