@@ -188,7 +188,7 @@ describe('pixrem', function () {
     var processed = function () {
       return pixrem.process(css);
     };
-    expect(processed).toThrow('Root font-size is invalid');
+    expect(processed).toThrow('Root font-size is invalid: "calc(1em + 2px)");
   });
 
   it('should expose postcss processor', function () {
