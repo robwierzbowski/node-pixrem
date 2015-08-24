@@ -95,9 +95,13 @@ Report bugs and feature proposals in the [Github issue tracker](https://github.c
 
 ## Release History
 
-1.3.2, Aug 24, 2015
+2.0.0, Aug 24, 2015
 
 * Update to PostCSS 5.0
+
+1.3.2, Aug 24, 2015
+
+* Unpublished version
 
 1.3.1, Jul 9, 2015
 
