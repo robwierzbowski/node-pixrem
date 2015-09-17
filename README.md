@@ -95,6 +95,10 @@ Report bugs and feature proposals in the [Github issue tracker](https://github.c
 
 ## Release History
 
+2.0.1, Sep 17, 2015
+
+* Fix NaNpx values (#45)
+
 2.0.0, Aug 24, 2015
 
 * Update to PostCSS 5.0
