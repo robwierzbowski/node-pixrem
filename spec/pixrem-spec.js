@@ -54,6 +54,13 @@ describe('pixrem', function () {
     expect(processed).toBe(expected);
   });
 
+  it('should generate fallbacks with a vw root em value', function () {
+    var expected = '.rule { font-size: 32px; font-size: 2rem }';
+    var processed = pixrem.process(css, '.625vw');
+
+    expect(processed).toBe(expected);
+  });
+
   it('should generate fallbacks with a value starting with dot', function () {
     var expected = '.rule { font-size: 16px; font-size: 2rem }';
     var processed = pixrem.process(css, '.5em');
