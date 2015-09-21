@@ -20,7 +20,7 @@
     "npm": ">=1.2.10"
   },
   "scripts": {
-    "test": "jasmine-node spec"
+    "test": "mocha"
   },
   "dependencies": {
     "browserslist": "^0.5.0",
@@ -28,7 +28,7 @@
     "reduce-css-calc": "^1.2.0"
   },
   "devDependencies": {
-    "jasmine-node": "~1.11.0"
+    "mocha": "^2.3.2"
   },
   "keywords": [
     "css",
