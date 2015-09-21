@@ -57,6 +57,15 @@ describe('pixrem', function () {
     assert.equal(processed, expected);
   });
 
+  it('should warn when using browser-dependent unit', function (done) {
+    var expected = '.rule { font-size: 32px; font-size: 2rem }';
+    var processed = postcss([pixrem({rootValue: '1vw'})]).process(css).then(function (result) {
+      var warnings = result.warnings();
+      assert.deepEqual(warnings, [{type: 'warning', text: 'Unit cannot be used for conversion, so 16px is used.', plugin: 'pixrem'}]);
+      done();
+    }).catch(done);
+  });
+
   it('should generate fallbacks with a value starting with dot', function () {
     var expected = '.rule { font-size: 16px; font-size: 2rem }';
     var processed = postcss([pixrem({rootValue: '.5em'})]).process(css).css;
