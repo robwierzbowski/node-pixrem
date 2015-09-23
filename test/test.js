@@ -193,14 +193,15 @@ describe('pixrem', function () {
     assert.equal(processed, expected);
   });
 
-  it('should throw error when root font-size is invalid', function () {
+  it('should throw error when root font-size is invalid', function (done) {
     var css = 'html { font-size: calc(1em + 2px) } .rule { font-size: 2rem; }';
-    var processed = function () {
-      return postcss([pixrem]).process(css).css;
-    };
-    assert.throws(processed, function (err) {
-      return err.message === 'Root font-size is invalid';
-    });
+    postcss([pixrem]).process(css).then(function () {
+      done('should not run');
+    }).catch(function (err) {
+      assert.equal(err.name, 'CssSyntaxError');
+      assert.equal(err.reason, 'Root font-size is invalid');
+      done();
+    }).catch(done);
   });
 
   it('should reduce line-breaks when inserting new node', function () {
