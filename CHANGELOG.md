@@ -1,5 +1,12 @@
 ## Release History
 
+3.0.0, Sep 23, 2015
+
+* Export module as a PostCSS plugin (#35)
+* Follow PostCSS plugin guidelines
+* Removed `rootValue` parameter, now defined in options (#40)
+* Removed old API. Always use pixrem with PostCSS API.
+
 2.0.1, Sep 17, 2015
 
 * Fix NaNpx values (#45)
