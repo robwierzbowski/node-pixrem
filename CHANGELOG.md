@@ -6,6 +6,7 @@
 * Follow PostCSS plugin guidelines
 * Removed `rootValue` parameter, now defined in options (#40)
 * Removed old API. Always use pixrem with PostCSS API.
+* Added: `unitPrecision` for rounded values
 
 2.0.1, Sep 17, 2015
 

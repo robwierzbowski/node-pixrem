@@ -78,9 +78,21 @@ describe('pixrem', function () {
     assert.equal(processed, expected);
   });
 
-  it('should generate integer fallbacks, rounded down', function () {
-    var expected = '.rule { font-size: 49px; font-size: 2rem }';
-    var processed = postcss([pixrem({rootValue: '155%'})]).process(css).css;
+  it('should round values based on default precision', function () {
+    var expected = '.rule { font-size: 36.032px; font-size: 2rem }';
+    var processed = postcss([pixrem({rootValue: '1.126em'})]).process(css).css;
+    assert.equal(processed, expected);
+  });
+
+  it('should return integer when precision is 0', function () {
+    var expected = '.rule { font-size: 36px; font-size: 2rem }';
+    var processed = postcss([pixrem({rootValue: '1.126em', unitPrecision: 0})]).process(css).css;
+    assert.equal(processed, expected);
+  });
+
+  it('should return integer rounded down', function () {
+    var expected = '.rule { font-size: 36px; font-size: 2rem }';
+    var processed = postcss([pixrem({rootValue: '1.156em', unitPrecision: 0})]).process(css).css;
     assert.equal(processed, expected);
   });
 

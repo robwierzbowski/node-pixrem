@@ -67,13 +67,14 @@ And returns this:
 ### Options
 
 Type: `Object | Null`
-Default: `{ rootValue: 16, replace: false, atrules: false, html: true, browsers: 'ie <= 8' }`
+Default: `{rootValue: 16, replace: false, atrules: false, html: true, browsers: 'ie <= 8', unitPrecision: 3}`
 
-- `rootValue` the root element font size. Can be `px`, `rem`, `em`, `%`, or unitless pixel value. Pixrem also tries to get the root font-size from CSS (`html` or `:root`) and overrides this option. Use `html` option to disable this behaviour.
-- `replace`   replaces rules containing `rem`s instead of adding fallbacks.
-- `atrules`   generates fallback in at-rules too (media-queries)
-- `html`      overrides root font-size from CSS `html {}` or `:root {}`
-- `browsers`  sets browser's range you want to target, based on [browserslist](https://github.com/ai/browserslist)
+- `rootValue`     the root element font size. Can be `px`, `rem`, `em`, `%`, or unitless pixel value. Pixrem also tries to get the root font-size from CSS (`html` or `:root`) and overrides this option. Use `html` option to disable this behaviour.
+- `replace`       replaces rules containing `rem`s instead of adding fallbacks.
+- `atrules`       generates fallback in at-rules too (media-queries)
+- `html`          overrides root font-size from CSS `html {}` or `:root {}`
+- `browsers`      sets browser's range you want to target, based on [browserslist](https://github.com/ai/browserslist)
+- `unitPrecision` control the significant digits after the decimal point
 
 ## Contribute
 
