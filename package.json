@@ -32,9 +32,11 @@
   },
   "keywords": [
     "css",
+    "postcss",
+    "postcss-plugin",
+    "rem",
     "parser",
     "postproccessor",
-    "rem",
     "responsive"
   ]
 }
