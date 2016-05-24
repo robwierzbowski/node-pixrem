@@ -1,5 +1,8 @@
 ## Release History
 
+3.0.1, May 24, 2016
+* Fix #54: fallback not added when ie9 and ie 10 are in scope
+
 3.0.0, Sep 23, 2015
 
 * Export module as a PostCSS plugin (#35)
