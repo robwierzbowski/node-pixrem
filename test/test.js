@@ -258,6 +258,16 @@ describe('pixrem', function () {
     assert.equal(processed, expected);
   });
 
+  it('should add fallback when IE8 is in scope', function () {
+    var css = '.rule{width: 2rem}';
+    var expected = '.rule{width: 32px;width: 2rem}';
+    var processed1 = postcss([pixrem({browsers: 'ie 8'})]).process(css).css;
+    var processed2 = postcss([pixrem({browsers: 'ie >= 8'})]).process(css).css;
+    var processed3 = postcss([pixrem({browsers: 'ie <= 8'})]).process(css).css;
+    assert.equal(processed1, processed2);
+    assert.equal(processed2, processed3);
+  });
+
   it('should add fallback when only IE6 is in scope', function () {
     var css = '.rule{width: 2rem}';
     var expected = '.rule{width: 32px;width: 2rem}';
