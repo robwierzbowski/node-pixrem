@@ -1,5 +1,8 @@
 ## Release History
 
+3.0.2, August 22, 2016
+* Fix reduce-css-calc security bug
+
 3.0.1, May 24, 2016
 * Fix #54: fallback not added when ie9 and ie 10 are in scope
 
