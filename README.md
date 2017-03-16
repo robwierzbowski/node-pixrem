@@ -51,7 +51,7 @@ And returns this:
 
 ```css
 .sky {
-  margin: 80px 2px 3em 100%;
+  margin: 40px 2px 3em 100%;
   margin: 2.5rem 2px 3em 100%;
   color: blue;
 }
