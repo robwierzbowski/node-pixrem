@@ -1,5 +1,10 @@
 ## Release History
 
+4.0.0, July 06, 2017
+
+* Update to PostCSS 6.0
+* Update to Browserslist 2.0
+
 3.0.2, August 22, 2016
 * Fix reduce-css-calc security bug
 
