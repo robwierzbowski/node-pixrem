@@ -23,8 +23,8 @@
     "test": "mocha"
   },
   "dependencies": {
-    "browserslist": "^1.0.0",
-    "postcss": "^5.0.0",
+    "browserslist": "^2.0.0",
+    "postcss": "^6.0.0",
     "reduce-css-calc": "^1.2.7"
   },
   "devDependencies": {
