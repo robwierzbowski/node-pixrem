@@ -1,8 +1,12 @@
 ## Release History
 
+4.0.1, July 06, 2017
+
+* Fix CI build, testing only Node.js 4, 6 and stable
+
 4.0.0, July 06, 2017
 
-* Update to PostCSS 6.0
+* Update to PostCSS 6.0 (no longer support Node.js 0.12)
 * Update to Browserslist 2.0
 
 3.0.2, August 22, 2016
