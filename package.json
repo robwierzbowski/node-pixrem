@@ -23,9 +23,9 @@
     "test": "mocha"
   },
   "dependencies": {
-    "browserslist": "^2.0.0",
-    "postcss": "^6.0.0",
-    "reduce-css-calc": "^1.2.7"
+    "browserslist": "^4.3.6",
+    "postcss": "^7.0.7",
+    "reduce-css-calc": "^2.1.5"
   },
   "devDependencies": {
     "mocha": "^2.3.2"
