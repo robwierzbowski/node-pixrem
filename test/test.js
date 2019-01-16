@@ -282,4 +282,11 @@ describe('pixrem', function () {
     assert.equal(processed, expected);
   });
 
+  it('should not convert rem or duplicate rule for \'rem\' string in base64 data', function () {
+    var css = '.rule{background-image: url(data:image/png;base64,Waj8JihBKremJFeiD0T4wd3rem/vS+lPDE1O3z9eREMu2T);}';
+    var expected = '.rule{background-image: url(data:image/png;base64,Waj8JihBKremJFeiD0T4wd3rem/vS+lPDE1O3z9eREMu2T);}';
+    var processed = postcss([pixrem]).process(css).css;
+    assert.equal(processed, expected);
+  });
+
 });
