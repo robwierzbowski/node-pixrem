@@ -6,7 +6,7 @@
 
 ## Installation
 
-`npm install --save pixrem`
+`npm install --save postcss pixrem`
 
 ## Usage
 
