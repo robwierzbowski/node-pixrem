@@ -16,19 +16,21 @@
   ],
   "main": "lib/pixrem.js",
   "engines": {
-    "node": ">=4.0.0",
-    "npm": ">=1.2.10"
+    "node": ">=10"
   },
   "scripts": {
     "test": "mocha"
   },
   "dependencies": {
-    "browserslist": "^4.3.6",
-    "postcss": "^7.0.7",
-    "reduce-css-calc": "^2.1.5"
+    "browserslist": "^4.16.6",
+    "reduce-css-calc": "^2.1.8"
   },
   "devDependencies": {
-    "mocha": "^2.3.2"
+    "mocha": "^8.4.0",
+    "postcss": "^8.2.15"
+  },
+  "peerDependencies": {
+    "postcss": "^8.0.0"
   },
   "keywords": [
     "css",
